@@ -1,7 +1,8 @@
+const webpack = require("webpack");
 const path = require("path");
 
 const config = {
-  entry: ["./src/index.jsx"],
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -14,14 +15,6 @@ const config = {
         exclude: /node_modules/,
       },
     ],
-  },
-  devServer: {
-    static: {
-      directory: "./dist",
-    },
-  },
-  resolve: {
-    extensions: ["", ".js", ".jsx"],
   },
 };
 
